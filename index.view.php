@@ -63,11 +63,11 @@
     <hr>
     <center>Lamda</center>
     <!-- Lambda Function -->
-    <?php
+    <?php /*
     $lambdaFilter = array_filter($NewBook, function ($book) {
         return $book['releaseYear'] < 2000;
     });
-
+    */
     ?>
     <?php foreach ($lambdaFilter as $lamb) : ?>
         <li>

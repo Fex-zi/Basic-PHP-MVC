@@ -66,4 +66,11 @@ $read = true;
 //shorthand condition
 $msg = !$read ? "You haven't read it {$name}" : "You have read {$name}";
 
+
+//lamda filter
+$lambdaFilter = array_filter($NewBook, function ($book) {
+    return $book['releaseYear'] < 2000;
+});
+
+
 require "index.view.php";
