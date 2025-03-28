@@ -28,9 +28,10 @@
     </h1>
     <ul>
         <li>
-            https://admissions.utahtech.edu/admitted-whats-next/
+
         </li>
     </ul>
 </body>
+https://admissions.utahtech.edu/admitted-whats-next/
 
 </html>
