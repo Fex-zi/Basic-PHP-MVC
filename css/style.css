@@ -1,7 +1,10 @@
 body{
-    display: grid;
+    /* display: grid; */
     place-items: center;
     height: 100vh;
     margin:0;
     font-family: sans-serif;
+}
+hr{
+    border: 1px solid red;
 }

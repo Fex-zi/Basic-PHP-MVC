@@ -31,6 +31,12 @@
 
         </li>
     </ul>
+    <!-- My Basic pagination -->
+    <?php $page = 1
+
+    ?>
+
+    <a href="index.php">Old code</a> | <a href="index_<?= $page + 1 ?>.php">New code</a>
 </body>
 https://admissions.utahtech.edu/admitted-whats-next/
 
