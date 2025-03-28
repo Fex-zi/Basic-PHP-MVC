@@ -52,7 +52,10 @@
     <!-- Associate array -->
     <?php foreach ($NewBook as $NewBook) : ?>
 
-        <li><a href="<?= $NewBook['purchaseUrl'] ?>"><?= "{$NewBook['name']}</a> by {$NewBook['author']}" ?></li>
+        <li>
+            <a href="<?= $NewBook['purchaseUrl'] ?>">
+                <?= "{$NewBook['name']}</a> by {$NewBook['author']}" ?>
+        </li>
 
     <?php endforeach; ?>
 
