@@ -21,13 +21,13 @@
     $NewBook = [
         [
             'name' => 'Do andriods Dream of Electric Sheep',
-            'author' => 'Paige Loudon',
+            'author' => 'Ifeanyi Ojukwu',
             'releaseYear' => 2014,
             'purchaseUrl' => 'https://fexzitech.com'
         ],
         [
             'name' => 'Project Hail Mary',
-            'author' => 'Paige Loudon',
+            'author' => 'Ifeanyi Ojukwu',
             'releaseYear' => 2010,
             'purchaseUrl' => 'https://fexzitech.com'
         ],
@@ -81,9 +81,9 @@
 
     <hr>
     <!-- filter -->
-    Written By Paige Loudon
+    Written By Ifeanyi Ojukwu
     <?php foreach ($NewBook as $NewBook1) : ?>
-        <?php if ($NewBook1['author'] === 'Paige Loudon') : ?>
+        <?php if ($NewBook1['author'] === 'Ifeanyi Ojukwu') : ?>
 
             <li>
                 <a href="<?= $NewBook1['purchaseUrl'] ?>">
@@ -95,7 +95,7 @@
     <hr>
     <!--Filter by function -->
     <p>
-        <?php foreach (filterByAuthor($NewBook, 'Paige Loudon') as $NewBook2) : ?>
+        <?php foreach (filterByAuthor($NewBook, 'Ifeanyi Ojukwu') as $NewBook2) : ?>
 
             <li>
                 <a href="<?= $NewBook2['purchaseUrl'] ?>">
