@@ -1,76 +1,50 @@
 <?php
 
-//array
-$books = [
-    "Do andriods dream of electric sheep",
-    "The langoliers ",
-    "Hail Mary"
+// Enable error reporting for debugging
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+// Simple Array-Based Router
+$uri = $_SERVER['REQUEST_URI'];
+
+// Log the raw URI for debugging
+error_log("Raw URI: " . $uri);
+
+// Remove query string if present
+$uri_parts = explode('?', $uri, 2);
+$uri = $uri_parts[0];
+
+// Check which environment we're in (development or production)
+$is_dev = strpos($uri, '/PHP-MVC/') === 0;
+
+// Set base path based on environment detection
+$base_path = $is_dev ? '/PHP-MVC/' : '/';
+
+// Process the path
+$path = str_replace($base_path, '', $uri);
+$path = trim($path, '/');
+
+// Array of valid routes
+$routes = [
+    'about' => 'about.php',
+    'contact' => 'contact.php'
 ];
 
-//associate array
-$NewBook = [
-    [
-        'name' => 'Do andriods Dream of Electric Sheep',
-        'author' => 'Ifeanyi Ojukwu',
-        'releaseYear' => 2014,
-        'purchaseUrl' => 'https://fexzitech.com'
-    ],
-    [
-        'name' => 'Project Hail Mary',
-        'author' => 'Ifeanyi Ojukwu',
-        'releaseYear' => 2010,
-        'purchaseUrl' => 'https://fexzitech.com'
-    ],
-    [
-        'name' => 'Things Fall Apart',
-        'author' => ' Chinua Achebe',
-        'releaseYear' => 1958,
-        'purchaseUrl' => 'https://www.amazon.com/Things-Fall-Apart-Chinua-Achebe/dp/0385474547'
-    ],
-];
-
-function filterByAuthor($NewBook, $author)
-{
-    $filteredBooks = [];
-    foreach ($NewBook as $NewBook2) {
-        if ($NewBook2['author'] ===  $author) {
-            $filteredBooks[] = $NewBook2;
-        }
+// Check if the path exists in our routes array
+if (array_key_exists($path, $routes)) {
+    if (file_exists($routes[$path])) {
+        require $routes[$path];
+        exit;
+    } else {
+        // If file doesn't exist yet
+        echo "Page coming soon";
+        exit;
     }
-    return $filteredBooks;
+} else {
+    // Default homepage content
+
+
+    $heading = 'Home';
+
+    require "views/index.view.php";
 }
-
-//Lamda Array
-// $lambdaFilter = array_filter($NewBook, function ($book) {
-//     return $book['releaseYear'] < 2000;
-// });
-
-// function filter($items, $fn)
-// {
-//     $filtered = [];
-//     foreach ($items as $item) {
-//         if ($fn($item)) {
-//             $filteredItems[] = $item;
-//         }
-//     }
-//     return $filtered;
-// }
-// $filteredItems = filter($books, function ($book) {
-//     return $book['releaseYear'] >= 2000;
-// });
-
-
-$name = "Dark Matter";
-$read = true;
-
-//shorthand condition
-$msg = !$read ? "You haven't read it {$name}" : "You have read {$name}";
-
-
-//lamda filter
-$lambdaFilter = array_filter($NewBook, function ($book) {
-    return $book['releaseYear'] < 2000;
-});
-
-
-require "index.view.php";
