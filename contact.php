@@ -1,5 +1,6 @@
 <?php
-$HackedUrl = '/php-mvc/contact.php';
-$heading = 'Contact us';
+
 require "functions.php";
+
+$heading = 'Contact us';
 require "views/contact.view.php";

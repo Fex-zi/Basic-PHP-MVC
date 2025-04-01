@@ -1,6 +1,6 @@
 <?php
 
-$HackedUrl = '/php-mvc/about.php';
-$heading = 'About us';
 require "functions.php";
+
+$heading = 'About us';
 require "views/about.view.php";

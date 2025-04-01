@@ -1,9 +1,7 @@
 <?php
 
-$heading = 'Home';
-
-$HackedUrl = "/php-mvc/";
-
 require "functions.php";
+
+$heading = 'Home';
 
 require "views/index.view.php";
