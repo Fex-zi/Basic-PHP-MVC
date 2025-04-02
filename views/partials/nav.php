@@ -8,9 +8,9 @@
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                        <a href="<?= basePath() ?>" class="<?= urlIs(path('')) ? 'bg-gray-900 text-white' : 'text-gray-300' ?> hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Home</a>
-                        <a href="<?= path('about.php') ?>" class="<?= urlIs(path('about.php')) ? 'bg-gray-900 text-white' : 'text-gray-300' ?> hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</a>
-                        <a href="<?= path('contact.php') ?>" class="<?= urlIs(path('contact.php')) ? 'bg-gray-900 text-white' : 'text-gray-300' ?> hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</a>
+                        <a href="<?= basePath() ?>" class="<?= urlIs(basePath()) ? 'bg-gray-900 text-white' : 'text-gray-300' ?> hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="<?= path('/about') ?>" class="<?= urlIs(path('/about')) ? 'bg-gray-900 text-white' : 'text-gray-300' ?> hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</a>
+                        <a href="<?= path('/contact') ?>" class="<?= urlIs(path('/contact')) ? 'bg-gray-900 text-white' : 'text-gray-300' ?> hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</a>
                     </div>
                 </div>
             </div>
@@ -75,9 +75,9 @@
     <div class="md:hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="<?= basePath() ?>" class="block rounded-md px-3 py-2 text-base font-medium <?= urlIs(path('')) ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?>">Home</a>
-            <a href="<?= path('about.php') ?>" class="block rounded-md px-3 py-2 text-base font-medium <?= urlIs(path('about.php')) ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?>" <?= urlIs(path('about.php')) ? 'aria-current="page"' : '' ?>>About</a>
-            <a href="<?= path('contact.php') ?>" class="block rounded-md px-3 py-2 text-base font-medium <?= urlIs(path('contact.php')) ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?>" <?= urlIs(path('contact.php')) ? 'aria-current="page"' : '' ?>>Contact</a>
+            <a href="<?= basePath() ?>" class="block rounded-md px-3 py-2 text-base font-medium <?= urlIs(basePath()) ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?>">Home</a>
+            <a href="<?= path('/about') ?>" class="block rounded-md px-3 py-2 text-base font-medium <?= urlIs(path('/about')) ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?>" <?= urlIs(path('/about')) ? 'aria-current="page"' : '' ?>>About</a>
+            <a href="<?= path('/contact') ?>" class="block rounded-md px-3 py-2 text-base font-medium <?= urlIs(path('/contact')) ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?>" <?= urlIs(path('/contact')) ? 'aria-current="page"' : '' ?>>Contact</a>
 
         </div>
         <div class="border-t border-gray-700 pt-4 pb-3">
