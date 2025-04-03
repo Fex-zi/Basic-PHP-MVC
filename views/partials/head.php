@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $heading ? $heading : 'Page' ?></title>
 </head>
-<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
 
 
 <body class="h-full">

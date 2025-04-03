@@ -16,23 +16,9 @@ function path($uri = '')
     $uri = ltrim($uri, '/');
     return basePath() . $uri;
 }
+
 // End auto detect environment //
-
-$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
-
-
-$routes = [
-
-    basePath() => 'controllers/index.php',
-
-    path('/about') => 'controllers/about.php',
-
-    path('/notes') => 'controllers/notes.php',
-
-    path('/note') => 'controllers/note.php',
-
-    path('/contact') => 'controllers/contact.php',
-];
+$routes = require('routes.php');
 
 
 function routeToController($uri, $routes)
@@ -51,4 +37,5 @@ function abort($code)
     die();
 }
 
+$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 routeToController($uri, $routes);
