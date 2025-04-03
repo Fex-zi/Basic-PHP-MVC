@@ -12,7 +12,7 @@
                 Go back... </a>
         </p>
         <p>
-            <?= $note['body']; ?></a>
+            <?= htmlspecialchars($note['body']); ?></a>
             </li>
         </p>
     </div>
