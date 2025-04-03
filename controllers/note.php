@@ -9,14 +9,10 @@ $currentUserid = 1;
 
 $id = $_GET['id'];
 
-$note = $db->query('SELECT * FROM notes WHERE id = :id', ['id' => $id])->fetch();
+$note = $db->query('SELECT * FROM notes WHERE id = :id', ['id' => $id])->findOrFail();
 
-if (!$note) {
-    abort(Response::NOT_FOUND);
-}
 
-if ($note['user_id'] !== $currentUserid) {
-    abort(Response::FORBIDDEN);
-}
+
+authorize($note['user_id'] === $currentUserid);
 
 require "views/note.view.php";

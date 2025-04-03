@@ -6,3 +6,10 @@ function urlIs($value)
     // The value should already include the base path (e.g., '/php-mvc/about.php')
     return $_SERVER['REQUEST_URI'] === $value;
 }
+
+function authorize($condition, $status = Response::FORBIDDEN)
+{
+    if (!$condition) {
+        abort($status);
+    }
+}

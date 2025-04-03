@@ -1,4 +1,4 @@
-<?php $heading = '404'; ?>
+<?php $heading = '403'; ?>
 <?php require "partials/head.php"; ?>
 <?php require "partials/nav.php"; ?>
 
