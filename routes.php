@@ -2,15 +2,15 @@
 
 return [
 
-    basePath() => 'controllers/index.php',
+    url() => 'controllers/index.php',
 
-    path('/about') => 'controllers/about.php',
+    url('/about') => 'controllers/about.php',
 
-    path('/notes') => 'controllers/notes.php',
+    url('/notes') => 'controllers/notes.php',
 
-    path('/note') => 'controllers/note.php',
+    url('/note') => 'controllers/note.php',
 
-    path('/note/create') => 'controllers/note-create.php',
+    url('/note/create') => 'controllers/note-create.php',
 
-    path('/contact') => 'controllers/contact.php',
+    url('/contact') => 'controllers/contact.php',
 ];

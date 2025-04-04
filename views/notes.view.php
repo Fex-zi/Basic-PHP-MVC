@@ -10,14 +10,14 @@
         <p>
         <ul><?php foreach ($notes as $note) : ?>
                 <li>
-                    <a href="<?= path('/note') ?>?id=<?= $note['id']; ?>" class="text-blue-500 hover:underline"> <?= htmlspecialchars($note['body']); ?></a>
+                    <a href="<?= url('/note') ?>?id=<?= $note['id']; ?>" class="text-blue-500 hover:underline"> <?= htmlspecialchars($note['body']); ?></a>
                 </li>
 
                 </p>
             <?php endforeach; ?>
         </ul>
         <p class="mt-6">
-            <a href="<?= path('/note/create') ?>" class="text-blue-500 hover:underline"> Create Note</a>
+            <a href="<?= url('/note/create') ?>" class="text-blue-500 hover:underline"> Create Note</a>
 
         </p>
     </div>

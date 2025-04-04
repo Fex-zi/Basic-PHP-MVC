@@ -22,7 +22,7 @@ class Database
 
         return $this;
     }
-
+    //rename default functions
     public function find()
     {
 
