@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 03, 2025 at 07:17 PM
+-- Generation Time: Apr 04, 2025 at 11:35 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -41,7 +41,11 @@ INSERT INTO `notes` (`id`, `body`, `user_id`) VALUES
 (1, 'Just typing whatever', 1),
 (2, 'I love object-oriented programming', 1),
 (3, 'Going to college online is better', 2),
-(4, 'I love Painting', 2);
+(4, 'I love Painting', 2),
+(5, 'I wow, yes, lets go go', 2),
+(6, 'I love PHP & Javascript', 1),
+(7, 'well checking from the other page\r\n', 1),
+(9, '<script>alert(\'this is cross site scripting test\');</script>', 1);
 
 -- --------------------------------------------------------
 
@@ -89,7 +93,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `notes`
 --
 ALTER TABLE `notes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `users`

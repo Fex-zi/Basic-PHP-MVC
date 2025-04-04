@@ -6,11 +6,11 @@ return [
 
     url('/about') => 'controllers/about.php',
 
-    url('/notes') => 'controllers/notes.php',
+    url('/notes') => 'controllers/notes/index.php',
 
-    url('/note') => 'controllers/note.php',
+    url('/note') => 'controllers/notes/show.php',
 
-    url('/note/create') => 'controllers/note-create.php',
+    url('/note/create') => 'controllers/notes/create.php',
 
     url('/contact') => 'controllers/contact.php',
 ];

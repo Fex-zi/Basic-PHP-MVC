@@ -15,4 +15,4 @@ $note = $db->query('SELECT * FROM notes WHERE id = :id', ['id' => $id])->findOrF
 
 authorize($note['user_id'] === $currentUserid);
 
-require "views/note.view.php";
+require "views/notes/show.view.php";
