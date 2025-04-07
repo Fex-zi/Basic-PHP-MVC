@@ -1,4 +1,7 @@
 <?php
+
+use Core\Response;
+
 //Pass no arguments or empty string for base path, or a URI for a specific path
 function url($uri = '')
 {
