@@ -3,8 +3,6 @@
 <?php require base_path('views/partials/banner.php') ?>
 
 
-
-
 <main>
     <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
         <p class="mb-6">
@@ -16,7 +14,8 @@
             </li>
         </p>
         <form method="POST" class="mt-6">
-            <input type="hidden" name="id" value="<?= $note['id'] ?>" style="display:hidden;">
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="hidden" name="id" value="<?= $note['id'] ?>">
             <p><button class="text-sm text-red-500">Delete</button></p>
         </form>
     </div>
