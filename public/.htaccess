@@ -1,11 +1,12 @@
 RewriteEngine On
 # Don't specify RewriteBase to make it more flexible
-# RewriteBase /PHP-MVC/
+RewriteBase /PHP-MVC/public/
 # RewriteBase /
 
 # Don't rewrite if the file or directory exists
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
-# Send everything to index.php with the complete path
-RewriteRule ^(.*)$ index.php [QSA,L]
+# Send everything to public/index.php with the complete path
+RewriteRule ^(.*)$ public/index.php [QSA,L]
+
